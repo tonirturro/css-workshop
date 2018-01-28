@@ -1,0 +1,75 @@
+/*******************************************
+ * Headers
+ *******************************************/
+@mixin header-defaults($font-size, $margin) {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    font-size: $font-size;
+    margin-top: $margin;
+    margin-bottom: $margin;
+}
+
+h1 {
+    @include header-defaults(2em, 0.67em);
+}
+
+h2 {
+    @include header-defaults(1.5em, 0.83em);
+}
+
+h3 {
+    @include header-defaults(1.17em, 1em);
+}
+
+h4 {
+    @include header-defaults(1em, 1.33em);
+}
+
+h5 {
+    @include header-defaults(.83em, 1.67em);
+}
+
+h6 {
+    @include header-defaults(.67em, 2.33em);
+}
+
+/*******************************************
+* Text blocks
+********************************************/
+
+p {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/********************************************
+* Lists
+*********************************************/
+@mixin base-list() {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;  
+}
+
+ul { 
+    @include base-list();
+    list-style-type: disc;
+}
+
+ol {
+    @include base-list();
+    list-style-type: decimal;
+}
+
+li {
+    display: list-item;
+}
+
