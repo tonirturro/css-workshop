@@ -1,0 +1,38 @@
+{
+  "name": "css-workshop",
+  "version": "1.0.0",
+  "description": "css problem solving",
+  "main": "index.js",
+  "scripts": {
+    "test": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonirturro/css-workshop.git"
+  },
+  "keywords": [
+    "css",
+    "webpack",
+    "angularjs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonirturro/css-workshop/issues"
+  },
+  "homepage": "https://github.com/tonirturro/css-workshop#readme",
+  "dependencies": {
+    "angular": "^1.6.8",
+    "angular-route": "^1.6.8"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.3.1",
+    "css-loader": "^0.28.8",
+    "eslint": "^4.15.0",
+    "file-loader": "^1.1.6",
+    "html-loader": "^0.5.4",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
+  }
+}
