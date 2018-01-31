@@ -13,7 +13,7 @@ angular.module('app', ['ngRoute'])
         .when('/defaults', {
             template: require('./views/defaults.html')
         })
-        .when('/scenario2', {
-            template: require('./views/scenario2.html')
+        .when('/boxes', {
+            template: require('./views/boxes.html')
         });   
     });

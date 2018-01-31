@@ -1,5 +1,9 @@
+@import 'properties/colors';
+@import 'properties/alignements';
+
 @import 'defaults/reset';
 @import 'defaults/normalize';
 @import 'defaults/defaults';
 
 @import 'pages/main';
+@import 'pages/boxes';

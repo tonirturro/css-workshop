@@ -1,0 +1,18 @@
+%box-size {
+    width: 150px;
+    height: 150px; 
+}
+
+.absolute-box {
+    @extend %content-centered;
+    @extend %box-size;
+    background: $color-ok;
+    position: absolute;
+}
+
+.fixed-box {
+    @extend %content-centered;
+    @extend %box-size;
+    background: $color-danger;
+    position: fixed;
+}
