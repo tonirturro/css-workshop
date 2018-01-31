@@ -50,7 +50,7 @@ p {
 /********************************************
 * Lists
 *********************************************/
-@mixin base-list() {
+%base-list {
     display: block;
     margin-top: 1em;
     margin-bottom: 1 em;
@@ -60,16 +60,57 @@ p {
 }
 
 ul { 
-    @include base-list();
-    list-style-type: disc;
+    @extend %base-list;
+    list-style-type:square;
 }
 
 ol {
-    @include base-list();
-    list-style-type: decimal;
+    @extend %base-list;
+    list-style-type: decimal-leading-zero;
 }
 
 li {
     display: list-item;
+}
+
+/*************************************
+* Navigation
+**************************************/
+nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  
+    li { 
+        display: inline-block;
+        border-style: solid;
+        border-width: 0px 2px 0px 0px;
+        border-color: black;
+    }
+
+    li:first-child {
+        a {
+            margin-left: 0
+        }
+    }
+
+    li:last-child {
+        border: none;
+    }
+  
+    a {
+      color: black;
+      display: block;
+      margin-left: -4px;
+      padding: 6px 12px;
+      text-decoration: none;
+    }
+
+    a:hover {
+        color: white;
+        background: black;
+    }
 }
 

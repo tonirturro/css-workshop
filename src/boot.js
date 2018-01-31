@@ -4,6 +4,7 @@ import angular from "angular";
 import "angular-route";
 
 angular.module('app', ['ngRoute'])
+    .component('main', require('./components/main'))
     .config(function($routeProvider) {
         $routeProvider
         .when('/', {
