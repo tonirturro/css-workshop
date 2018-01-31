@@ -9,6 +9,6 @@ Workshop to play with css trying to solve everyday web design ploblems
 To go to a particular step:
 
 ```sh
-git chekout [step]
+git checkout [step]
 ```
 
