@@ -16,3 +16,21 @@
     background: $color-danger;
     position: fixed;
 }
+
+.draggable-box {
+    @extend %content-centered;
+    @extend %box-size;
+    background: $color-warning;
+    position: absolute;
+    cursor: -webkit-grab;
+    &:hover {
+        border: 2px solid red;
+    }
+}
+
+.relative-box {
+    @extend %content-centered;
+    @extend %box-size;
+    background: $color-warning;
+    position: relative;    
+}

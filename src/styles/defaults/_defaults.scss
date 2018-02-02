@@ -88,29 +88,26 @@ nav {
         border-style: solid;
         border-width: 0px 2px 0px 0px;
         border-color: $color-foreground;
-    }
-
-    li:first-child {
-        a {
-            margin-left: 0
+        &:first-child {
+            a {
+                margin-left: 0
+            }        
+        }
+        &:last-child {
+            border: none;
         }
     }
 
-    li:last-child {
-        border: none;
-    }
-  
     a {
       color: $color-foreground;
       display: block;
       margin-left: -4px;
       padding: 6px 12px;
       text-decoration: none;
-    }
-
-    a:hover {
+      &:hover {
         color:  $color-foreground-inverted;
         background: $color-background-inverted;
+      }
     }
 }
 
