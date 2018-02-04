@@ -5,6 +5,7 @@ import "angular-route";
 
 angular.module('app', ['ngRoute'])
     .component('main', require('./components/main'))
+    .component('dialogSection', require('./components/dialog-section'))
     .directive('setPosition', require('./directives/setPosition'))
     .directive('draggable', require('./directives/draggable'))
     .config(function($routeProvider) {
@@ -17,5 +18,8 @@ angular.module('app', ['ngRoute'])
         })
         .when('/boxes', {
             template: require('./views/boxes.html')
+        })
+        .when('/dialog', {
+            template: require('./views/dialog.html')
         });   
     });

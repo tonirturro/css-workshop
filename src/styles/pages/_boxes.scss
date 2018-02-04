@@ -15,6 +15,7 @@
     @extend %box-size;
     background: $color-danger;
     position: fixed;
+    z-index: 3;
 }
 
 .draggable-box {
@@ -23,6 +24,7 @@
     background: $color-warning;
     position: absolute;
     cursor: -webkit-grab;
+    z-index: 2;
     &:hover {
         border: 2px solid red;
     }
@@ -33,4 +35,26 @@
     @extend %box-size;
     background: $color-warning;
     position: relative;    
+}
+
+.float-left-box {
+    @extend %content-centered;
+    @extend %box-size;
+    float: left;
+    background: $color-warning;
+    margin-right: 50px; 
+}
+
+.float-right-box {
+    @extend %content-centered;
+    @extend %box-size;
+    float: right;
+    background: $color-warning;
+    margin-right: 50px; 
+}
+
+.container-box {
+    width: 600px;
+    border: 1px dashed $color-danger;
+    position: absolute;
 }

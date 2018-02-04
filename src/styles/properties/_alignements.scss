@@ -3,3 +3,18 @@
     align-items: center;
     justify-content: center;
 }
+
+%content-inline-vertical-centered {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+%content-bottom-aligned {
+    position: absolute;
+    bottom: 0;
+}
+
+%content-right-aligned {
+    position: absolute;
+    right: 0;
+}

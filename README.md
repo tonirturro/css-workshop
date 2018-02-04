@@ -5,7 +5,8 @@ Workshop to play with css trying to solve everyday web design ploblems
 
 * step1 : Basic infrastucture.
 * step2 : Reset, normalize and redefine css defaults.
-* step3 : Element positioning.
+* step3 : Element positioning, traditional box model.
+* step4 : Layouts, flexible box model.
 
 To go to a particular step:
 
@@ -13,3 +14,8 @@ To go to a particular step:
 git checkout [step]
 ```
 
+## References
+
+* [Reseting styles](http://meyerweb.com/eric/tools/css/reset)
+* [Normalizing styles](https://necolas.github.io/normalize.css/)
+* [Block Element Modifier](http://getbem.com/)

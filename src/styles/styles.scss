@@ -1,9 +1,13 @@
 @import 'properties/colors';
 @import 'properties/alignements';
+@import 'properties/fonts';
 
 @import 'defaults/reset';
 @import 'defaults/normalize';
 @import 'defaults/defaults';
 
+@import 'controls/buttons';
+
 @import 'pages/main';
 @import 'pages/boxes';
+@import 'pages/layouts';

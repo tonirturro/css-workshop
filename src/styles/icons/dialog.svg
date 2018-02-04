@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>other-supplies-48--default.svg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="18.5" cy="7.5" r="7.5"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="15" height="15" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <ellipse id="path-3" cx="7.47922438" cy="26.4" rx="7.47922438" ry="7.5"></ellipse>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="14.9584488" height="15" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <ellipse id="path-5" cx="28.4792244" cy="26.5" rx="7.47922438" ry="7.5"></ellipse>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="14.9584488" height="15" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <ellipse id="path-7" cx="17.99" cy="19.9983056" rx="2.99000001" ry="2.99830557"></ellipse>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5.98000002" height="5.99661113" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="other-supplies-48--default.svg">
+            <g id="Group-24">
+                <rect id="Rectangle-26-Copy-22" x="0" y="0" width="48" height="48"></rect>
+                <g id="Group-23-Copy" transform="translate(6.000000, 6.000000)" stroke="#3E3E3E" stroke-width="2">
+                    <use id="Oval-6-Copy" mask="url(#mask-2)" xlink:href="#path-1"></use>
+                    <use id="Oval-6-Copy-2" mask="url(#mask-4)" xlink:href="#path-3"></use>
+                    <use id="Oval-6-Copy-3" mask="url(#mask-6)" xlink:href="#path-5"></use>
+                    <use id="Oval-7-Copy" mask="url(#mask-8)" xlink:href="#path-7"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

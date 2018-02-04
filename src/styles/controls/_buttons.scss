@@ -1,0 +1,24 @@
+.button {
+	@extend %font-style-button;
+    color: $color-foreground;
+	border-radius: 3px;
+	padding: 7px 12px;
+	margin-right: 5px;
+	border: 1px solid $color-foreground;
+	background-image: linear-gradient($color-background, $color-background-gradient);
+    cursor: pointer;
+}
+
+.button:last-child {
+	margin-right: 0;
+}
+
+.button--state-success {
+	color: $color-foreground-inverted;
+	background:$color-ok linear-gradient($color-ok, $color-ok-gradient) repeat-x;
+}
+
+.button--state-danger {
+	color: $color-danger;
+	cursor: not-allowed;
+}

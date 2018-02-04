@@ -1,0 +1,83 @@
+$dialog-box-border-style : 1px solid $color-foreground;
+$dialog-box-width: 640px;
+$dialog-box-height: 874px;
+$head_and_button_height: 71px;
+
+%status_layout {
+    flex: 1;
+    height:1em;
+    padding: 10px;    
+}
+
+.dialog-box {
+    position: relative;
+    top:10px;
+    border: $dialog-box-border-style;
+    width: $dialog-box-width;
+    height: $dialog-box-height;
+    padding: 0 24px 0px 24px;
+    &__header {
+        height: $head_and_button_height;
+        border-bottom: $dialog-box-border-style;
+        .header {
+            &__icon {
+                @extend %content-inline-vertical-centered;
+                background-image: url('./icons/dialog.svg');
+                background-size: 36px 36px;
+                background-repeat: no-repeat;
+                height: 36px;
+                width: 36px;
+            }        
+            &__title {
+                @extend %font-style-title;
+                @extend %content-inline-vertical-centered;
+                line-height: $head_and_button_height;
+            }
+        }      
+    }
+    &__title {
+        @extend %font-style-title;
+        @extend %content-inline-vertical-centered;
+        line-height: $head_and_button_height;      
+    }
+    &__section {
+        display:flex;
+        .section {
+            &__icon {
+                background-color: $color-background-graphic;
+                height: 156px;
+                width: 156px;
+                margin-right: 24px;    
+            }
+            &__status--ok {
+                @extend %status_layout;
+                background-color: $color-ok;
+            }
+            &__status--warning {
+                @extend %status_layout;
+                background-color: $color-warning;        
+            }
+            &__status--danger {
+                @extend %status_layout;
+                background-color: $color-danger;              
+            }
+        }
+    }
+    &__separator {
+        height: 16px;
+        border-bottom: $dialog-box-border-style;
+    }
+    &__footer {
+        @extend %content-bottom-aligned;
+        display: flex;
+        border-top: $dialog-box-border-style;
+        width: $dialog-box-width;
+        height: $head_and_button_height - 20px * 2;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        .footer__buttons {
+            @extend %content-right-aligned;
+            display: flex;
+        }
+    }
+}
