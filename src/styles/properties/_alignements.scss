@@ -5,16 +5,12 @@
 }
 
 %content-inline-vertical-centered {
-    display: inline-block;
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
 }
 
-%content-bottom-aligned {
-    position: absolute;
-    bottom: 0;
-}
-
-%content-right-aligned {
-    position: absolute;
-    right: 0;
+%content-inline-right-aligned {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }

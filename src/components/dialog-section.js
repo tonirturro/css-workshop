@@ -12,20 +12,10 @@ var dialogSection = {
         this.$onInit = function() {
             self.status = {
                 title: self.statusText,
-                style: "section__status--" + self.statusCode
+                style: "status--" + self.statusCode
             };
         };        
     }
 };
-
-function dialogSectionController() {
-    var self = this;
-    this.$onInit(function() {
-        self.status = {
-            title: "text",
-            style: "section__status--ok"
-        };
-    });
-}
 
 module.exports = dialogSection;
