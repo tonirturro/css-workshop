@@ -21,5 +21,9 @@ angular.module('app', ['ngRoute'])
         })
         .when('/dialog', {
             template: require('./views/dialog.html')
+        })        
+        .when('/dashboard', {
+            template: require('./views/dashboard.html')
         });   
+;   
     });

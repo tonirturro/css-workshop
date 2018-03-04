@@ -1,0 +1,53 @@
+$dashboard-width: 1200px;
+$dashboard-height: 900px;
+$dashboard-head-and-footer-height: 50px;
+$dashboard-padding: 24px;
+$dashboard-border: 1px solid black;
+$dashboard-panel-height: ($dashboard-height - ($dashboard-head-and-footer-height * 2)) / 2;
+$dashboard-panel-width: (($dashboard-width - $dashboard-width / 8 - $dashboard-width / 5) / 4) - 1;
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: $dashboard-height;
+    width: $dashboard-width;
+    &__head-and-footer {
+        background-color: $color-main-head-and-footer-background;
+        color: $color-main-head-and-footer-foreground;
+        height: $dashboard-head-and-footer-height;
+        padding: 0 $dashboard-padding;
+        @extend %font-style-dashboard-title;
+        @extend %content-inline-vertical-centered;
+    }
+    &__content {
+        flex: 1;
+        display: flex;
+        .navigation {
+            width: $dashboard-width / 8;
+            background-color: $color-background;
+            color: $color-foreground;
+            border-left: $dashboard-border;
+            border-right: $dashboard-border;
+        }
+        .panels {
+            flex: 1;
+            background-color: $color-background;
+            color: $color-foreground;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            &__panel-small {
+                width: $dashboard-panel-width;
+                height: $dashboard-panel-height;
+            }
+            &__panel-large {
+                width: $dashboard-panel-width * 2;
+                height: $dashboard-panel-height;
+            }
+        }
+        .settings {
+            width: $dashboard-width / 5;
+            background-color: $color-settings-background;
+            color: $color-foreground;
+        }
+   }
+}

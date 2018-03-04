@@ -1,0 +1,18 @@
+.panel {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid $color-panel;
+    border-radius: 8px;
+    box-sizing: border-box;
+    .panel-heading {
+        height: 1.5em;
+        padding: .25em;
+        background-color: $color-panel;
+        color: $color-foreground-inverted;
+    }
+    .panel-body {
+        flex: 1;
+        background-color: $color-background;
+        color: $color-foreground;
+    }
+}
