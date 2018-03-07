@@ -1,14 +1,18 @@
 'use strict';
 import "./styles/styles.scss";
-import angular from "angular";
-import "angular-route";
+import * as angular from "angular";
+import "angular-route"
+import { mainComponent } from "./components/main";
+import { dialogSection } from "./components/dialog-section";
 
-angular.module('app', ['ngRoute'])
-    .component('main', require('./components/main'))
-    .component('dialogSection', require('./components/dialog-section'))
+declare function require(params:string): any;
+
+const module = angular.module('app', [ 'ngRoute' ])
+    .component('main',  mainComponent)
+    .component('dialogSection', dialogSection)
     .directive('setPosition', require('./directives/setPosition'))
     .directive('draggable', require('./directives/draggable'))
-    .config(function($routeProvider) {
+    .config(($routeProvider: ng.route.IRouteProvider) => {
         $routeProvider
         .when('/', {
             template: require('./views/defaults.html')
@@ -24,6 +28,5 @@ angular.module('app', ['ngRoute'])
         })        
         .when('/dashboard', {
             template: require('./views/dashboard.html')
-        });   
-;   
+        });     
     });

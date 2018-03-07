@@ -2,7 +2,7 @@ const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: './src/boot.js',
+    entry: './src/boot.ts',
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, 'dist')
@@ -29,8 +29,16 @@ module.exports = {
                     'css-loader',
                     'sass-loader'
                 ]
+            },
+            {
+                test: /\.ts$/,
+                use: 'ts-loader',
+                exclude: /node_modules/
             }
         ]
+    },
+    resolve: {
+        extensions: ['.ts', '.js']
     },
     plugins: [
         new CopyWebpackPlugin([
