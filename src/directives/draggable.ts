@@ -1,53 +1,69 @@
-import { IAugmentedJQuery, IAttributes, IScope} from "angular";
+import { IAttributes, IAugmentedJQuery, IScope } from "angular";
 
 export class Draggable {
-    public link: (scope: IScope, element: IAugmentedJQuery, attr: IAttributes) => void;
+
+    public static Factory() {
+        const directive = ($document: IAugmentedJQuery) => {
+            return new Draggable($document);
+        };
+
+        directive.$inject = ["$document"];
+
+        return directive;
+    }
+
     private element: IAugmentedJQuery;
     private startX: number;
     private startY: number;
     private x: number;
     private y: number;
 
-    constructor(private $document: IAugmentedJQuery) {
-        Draggable.prototype.link = (scope: IScope, element: IAugmentedJQuery, attr: IAttributes) => {
-            this.element = element;
-            this.y = parseInt(element.css('top').split('px')[0]);
-            this.x = parseInt(element.css('left').split('px')[0]);
-    
-            this.element.on('mousedown',  (event: JQueryEventObject) => {
-                // Prevent default dragging of selected content
-                event.preventDefault();
-                this.startX = event.pageX - this.x;
-                this.startY = event.pageY - this.y;
-                $document.on('mousemove', this.mousemove);
-                $document.on('mouseup', this.mouseup);
-                element.css('cursor', ' -webkit-grabbing');
-            });    
-        }
-    }
+    /**
+     * Initializes an object from the Draggable class.
+     * @param $document The loaded HTML page
+     */
+    constructor(private $document: IAugmentedJQuery) {}
 
-    public static Factory() {
-        const directive = ($document: IAugmentedJQuery) => {
-            return new Draggable($document);
-        }
-
-        directive['$inject'] = ['$document'];
-
-        return directive;
-    }
-
-    private mousemove(event) {
-        this.y = event.pageY - this.startY;
-        this.x = event.pageX - this.startX;
-        this.element.css({
-            top: this.y + 'px',
-            left: this.x + 'px'
+    /**
+     * Directive link function to capture mouse events
+     * @param scope the parent scope
+     * @param element the element where the directive is attached
+     * @param attr the attributes from the element where the directive is attached
+     */
+    public link(scope: IScope, element: IAugmentedJQuery, attr: IAttributes): void {
+        this.element = element;
+        this.y = parseInt(this.element.css("top").split("px")[0], 10);
+        this.x = parseInt(this.element.css("left").split("px")[0], 10);
+        this.element.on("mousedown",  (event: JQueryEventObject) => {
+            // Prevent default dragging of selected content
+            event.preventDefault();
+            this.startX = event.pageX - this.x;
+            this.startY = event.pageY - this.y;
+            this.$document.on("mousemove", (mouseMoveEvent: JQueryEventObject) => { this.mousemove(mouseMoveEvent); });
+            this.$document.on("mouseup", () => { this.mouseup(); });
+            this.element.css("cursor", " -webkit-grabbing");
         });
     }
 
+    /**
+     * Captures the mouse movement and translates it to the attached element
+     * @param event the mouse event parameters
+     */
+    private mousemove(event: JQueryEventObject) {
+        this.y = event.pageY - this.startY;
+        this.x = event.pageX - this.startX;
+        this.element.css({
+            left: this.x + "px",
+            top: this.y + "px"
+        });
+    }
+
+    /**
+     * Ends drag at mouse up and detach from the mouse events
+     */
     private mouseup() {
-        this.$document.off('mousemove', this.mousemove);
-        this.$document.off('mouseup', this.mouseup);
-        this.element.css('cursor', ' -webkit-grab');
+        this.$document.off("mousemove");
+        this.$document.off("mouseup");
+        this.element.css("cursor", " -webkit-grab");
     }
 }

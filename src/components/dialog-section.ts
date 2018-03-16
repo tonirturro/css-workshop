@@ -1,53 +1,31 @@
-// 'use strict';
-
-// var dialogSection = {
-//     bindings: {
-//         statusText: '@',
-//         statusCode: '@'
-//     },
-//     transclude: true,
-//     template: require('./dialog-section.template.html'),
-//     controller: function() {
-//         var self = this;
-//         this.$onInit = function() {
-//             self.status = {
-//                 title: self.statusText,
-//                 style: "status--" + self.statusCode
-//             };
-//         };        
-//     }
-// };
-
-// module.exports = dialogSection;
-
 import { IComponentOptions } from "angular";
-declare function require(params:string): any;
+
+declare function require(params: string): any;
 
 interface IStatus {
     title: string;
     style: string;
 }
 
-export class dialogSectionController {
+class DialogSectionController {
     public statusText: string;
     public statusCode: string;
     public status: IStatus;
 
     public $onInit() {
         this.status = {
+            style: `status--${this.statusCode}`,
             title: this.statusText,
-            style: `status--${this.statusCode}`
-        }
+        };
     }
 }
 
 export const dialogSection: IComponentOptions = {
     bindings: {
-        statusText: '@',
-        statusCode: '@'
+        statusCode: "@",
+        statusText: "@"
     },
-    transclude: true,
-    template: require('./dialog-section.template.html'),
-    controller: dialogSectionController
-}
-
+    controller: DialogSectionController,
+    template: require("./dialog-section.template.html"),
+    transclude: true
+};

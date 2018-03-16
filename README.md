@@ -8,6 +8,7 @@ Workshop to play with css trying to solve everyday web design ploblems
 * step3 : Element positioning, traditional box model.
 * step4 : Layouts, flexible box model.
 * step5 : Apply flexible box model to dialog layouts.
+* step6 : Move from Javascript to Typescript.
 
 To go to a particular step:
 
