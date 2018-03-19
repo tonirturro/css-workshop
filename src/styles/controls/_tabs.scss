@@ -4,4 +4,22 @@
 .tab-content > .active {
     display: block;
 }
+
+.tabs-inline-content {
+    display: flex;
+    .navigation {
+        ul {
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            li {
+                transform: rotate(-90.0deg); 
+            }
+        }
+    }
+    .content {
+        flex: 1;
+        @extend %content-centered;
+    }
+}
   

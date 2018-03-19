@@ -1,6 +1,7 @@
 import "./styles/styles.scss";
 
 import * as angular from "angular";
+import { ITemplateCacheService } from "angular";
 import "angular-route";
 import "angular-ui-bootstrap";
 
@@ -37,3 +38,7 @@ const module = angular.module("app", [ "ngRoute", "ui.bootstrap" ])
             template: require("./views/uilib.html")
         });
     });
+
+module.run(["$templateCache", ($templateCache: ITemplateCacheService) => {
+    $templateCache.put("templates/tabset.html", require("./templates/tabset.html"));
+}]);
