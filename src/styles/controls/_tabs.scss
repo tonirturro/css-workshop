@@ -8,12 +8,15 @@
 .tabs-inline-content {
     display: flex;
     .navigation {
+        display: flex;
         ul {
-            width: auto;
             display: flex;
             flex-direction: column;
             li {
-                transform: rotate(-90.0deg); 
+                a {
+                    writing-mode: vertical-rl;
+                    transform: rotate(180deg);
+                }
             }
         }
     }

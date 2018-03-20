@@ -1,0 +1,22 @@
+.default-and-custom-panel {
+    display: flex;
+    width: calc(100% - 10px);
+    .cell {
+        padding: 5px;
+        flex: 1;
+        border: 1px solid $color-foreground;
+        &:last-child {
+            border-left: none;
+            a {
+                height: 200px;
+                text-align: center;
+            }
+            .tab-content {
+                height: 100%;
+                width: 100%;
+                @extend %content-centered;
+                background-color: $color-settings-background;
+            }
+        }
+    }
+}
