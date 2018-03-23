@@ -3,8 +3,9 @@ $dashboard-height: 900px;
 $dashboard-head-and-footer-height: 50px;
 $dashboard-padding: 24px;
 $dashboard-border: 1px solid black;
+$dashboard-settings-width:  $dashboard-width / 5;
 $dashboard-panel-height: ($dashboard-height - ($dashboard-head-and-footer-height * 2)) / 2;
-$dashboard-panel-width: (($dashboard-width - $dashboard-width / 8 - $dashboard-width / 5) / 4) - 1;
+$dashboard-panel-width: (($dashboard-width - $dashboard-width / 8 - $dashboard-settings-width) / 4) - 1;
 .dashboard {
     display: flex;
     flex-direction: column;
@@ -21,31 +22,53 @@ $dashboard-panel-width: (($dashboard-width - $dashboard-width / 8 - $dashboard-w
     &__content {
         flex: 1;
         display: flex;
-        .navigation {
-            width: $dashboard-width / 8;
-            background-color: $color-background;
-            color: $color-foreground;
-            border-left: $dashboard-border;
-            border-right: $dashboard-border;
-        }
-        .panels {
+        .content__navigation {
             flex: 1;
-            background-color: $color-background;
-            color: $color-foreground;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            &__panel-small {
-                width: $dashboard-panel-width;
-                height: $dashboard-panel-height;
+            .nav-pills {
+                > li {
+                    margin-left: 1px;
+                    > a {
+                        @extend %font-style-title;
+                        height: $dashboard-panel-height;
+                        padding: 0 $dashboard-padding;
+                        text-align: center;
+                        border: $dashboard-border;
+                        border-radius: 0 1em 1em 0; 
+                        box-sizing: border-box;
+                        border-top: none;                
+                    }
+                    + li {
+                        margin: 0;
+                    }
+                    &.active {
+                        a, a:hover, a:focus {
+                            padding: 0 $dashboard-padding;
+                            background-color: $color-background;
+                            color: $color-foreground;
+                            border-left: none;
+                        }
+                    }
+                }
             }
-            &__panel-large {
-                width: $dashboard-panel-width * 2;
-                height: $dashboard-panel-height;
-            }
+            .panels {
+                border-top: $dashboard-border;
+                background-color: $color-background;
+                color: $color-foreground;
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                &__panel-small {
+                    width: $dashboard-panel-width;
+                    height: $dashboard-panel-height;
+                }
+                &__panel-large {
+                    width: $dashboard-panel-width * 2;
+                    height: $dashboard-panel-height;
+                }
+            }    
         }
-        .settings {
-            width: $dashboard-width / 5;
+        .content_settings {
+            width: $dashboard-settings-width;
             background-color: $color-settings-background;
             color: $color-foreground;
         }
