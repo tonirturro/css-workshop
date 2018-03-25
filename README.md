@@ -10,6 +10,7 @@ Workshop to play with css trying to solve everyday web design ploblems
 * step5 : Apply flexible box model to dialog layouts.
 * step6 : Move from Javascript to Typescript.
 * step7 : Using externals UI libs.
+* step8 : Customizing 3rd part controls.
 
 To go to a particular step:
 
