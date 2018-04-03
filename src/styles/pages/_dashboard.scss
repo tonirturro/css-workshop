@@ -50,6 +50,18 @@ $dashboard-panel-width: (($dashboard-width - $dashboard-width / 8 - $dashboard-s
                     }
                 }
             }
+            .content {
+                align-items: initial;
+                justify-content: initial;
+                .tab-content {
+                    display: flex;
+                    width: 100%;
+                }
+                .tab-content > .active {
+                    flex: 1;
+                    display: flex;
+                }
+            }
             .panels {
                 border-top: $dashboard-border;
                 background-color: $color-background;
@@ -65,6 +77,9 @@ $dashboard-panel-width: (($dashboard-width - $dashboard-width / 8 - $dashboard-s
                     width: $dashboard-panel-width * 2;
                     height: $dashboard-panel-height;
                 }
+            }
+            .preview-component {
+                display: flex;
             }    
         }
         .content_settings {

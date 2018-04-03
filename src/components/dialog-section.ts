@@ -1,7 +1,5 @@
 import { IComponentOptions } from "angular";
 
-declare function require(params: string): any;
-
 interface IStatus {
     title: string;
     style: string;
@@ -26,6 +24,6 @@ export const dialogSection: IComponentOptions = {
         statusText: "@"
     },
     controller: DialogSectionController,
-    template: require("./dialog-section.template.html"),
+    templateUrl: "components/dialog-section.template.html",
     transclude: true
 };
