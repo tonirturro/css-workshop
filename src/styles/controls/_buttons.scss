@@ -1,9 +1,11 @@
+$button-border-radius:3px;
+$button-margin: 5px;
 .button {
 	@extend %font-style-button;
     color: $color-foreground;
-	border-radius: 3px;
+	border-radius: $button-border-radius;
 	padding: 7px 12px;
-	margin-right: 5px;
+	margin-right: $button-margin;
 	border: 1px solid $color-foreground;
 	background-image: linear-gradient($color-background, $color-background-gradient);
     cursor: pointer;
@@ -21,4 +23,21 @@
 .button--state-danger {
 	color: $color-danger;
 	cursor: not-allowed;
+}
+
+.button-group {
+	.button {
+		margin: 0;
+		border-radius: 0;
+	}
+	.button:first-child {
+		margin-right: -$button-margin;
+		border-top-left-radius: $button-border-radius;
+		border-bottom-left-radius: $button-border-radius;
+	}
+	.button:last-child {
+		margin-left: -$button-margin;
+		border-top-right-radius: $button-border-radius;
+		border-bottom-right-radius: $button-border-radius
+	}
 }

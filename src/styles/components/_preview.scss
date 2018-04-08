@@ -2,10 +2,23 @@ preview {
     display: flex;
     width: 100%;
     .preview-area {
-        width: 80%;
+        width: 75%;
+        display: flex;
+        margin: 10px;
+        border: 1px solid $color-foreground;
+        &__icon {
+            background-image: url('./icons/mono.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 350px;
+            height: 240px;
+        }
     }
     .controls {
         flex: 1;
-        background-color: $color-settings-background;
+        .controls__button-group {
+            margin-top: 10px;
+        }
     }
 }
