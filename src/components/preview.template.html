@@ -3,13 +3,17 @@
 </div>
 <div class="controls">
     <div class="button-group controls__button-group">
-        <button class="button">Left</button>
-        <button class="button">Center</button>
-        <button class="button">Right</button>
+        <button class="button" ng-click="previewCtrl.setHAlignement('flex-start')">Left</button>
+        <button class="button" ng-click="previewCtrl.setHAlignement('center')">Center</button>
+        <button class="button" ng-click="previewCtrl.setHAlignement('flex-end')">Right</button>
     </div>
     <div class="button-group controls__button-group">
-        <button class="button">Top</button>
-        <button class="button">Center</button>
-        <button class="button">Bottom</button>
+        <button class="button" ng-click="previewCtrl.setVAlignement('flex-start')">Top</button>
+        <button class="button" ng-click="previewCtrl.setVAlignement('center')">Center</button>
+        <button class="button" ng-click="previewCtrl.setVAlignement('flex-end')">Bottom</button>
+    </div>
+    <div class="controls__style">
+        <div>Flex style :</div>
+        <pre>{{ previewCtrl.previewStyle | json : 2 }}</pre>
     </div>
 </div>

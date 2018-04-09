@@ -17,8 +17,14 @@ preview {
     }
     .controls {
         flex: 1;
-        .controls__button-group {
+        &__button-group {
             margin-top: 10px;
+        }
+        &__style {
+            margin-top: 10px;
+            margin-right: 5px;
+            padding: 5px;
+            border: 1px solid $color-foreground;
         }
     }
 }
