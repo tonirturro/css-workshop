@@ -11,6 +11,7 @@ Workshop to play with css trying to solve everyday web design ploblems
 * step6 : Move from Javascript to Typescript.
 * step7 : Using externals UI libs.
 * step8 : Customizing 3rd part controls.
+* step9 : Flex box element alignement preview.
 
 To go to a particular step:
 
