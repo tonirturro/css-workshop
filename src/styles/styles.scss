@@ -10,11 +10,12 @@
 @import 'controls/panels';
 @import 'controls/navigation';
 @import 'controls/tabs';
+@import 'controls/modals';
 
 @import 'components/preview';
+@import 'components/dialog';
 
 @import 'pages/main';
 @import 'pages/boxes';
-@import 'pages/dialog';
 @import 'pages/dashboard';
 @import 'pages/uilib';

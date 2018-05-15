@@ -1,5 +1,4 @@
 $dialog-box-border-style : 1px solid $color-foreground;
-$dialog-box-width: 640px;
 $dialog-box-height: 874px;
 $head-and-button-height: 71px;
 $dialog_padding: 24px;
@@ -11,9 +10,7 @@ $dialog_padding: 24px;
 }
 
 .dialog-box {
-    margin-top:10px;
-    border: $dialog-box-border-style;
-    width: $dialog-box-width;
+    background: $color-background;
     height: $dialog-box-height;
     padding: 0 $dialog_padding;
     display: flex;

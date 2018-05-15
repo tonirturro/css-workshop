@@ -77,6 +77,9 @@ $dashboard-panel-width: (($dashboard-width - $dashboard-width / 8 - $dashboard-s
                     width: $dashboard-panel-width * 2;
                     height: $dashboard-panel-height;
                 }
+                .panel-body {
+                    @extend %content-centered;
+                }
             }
             .preview-component {
                 display: flex;

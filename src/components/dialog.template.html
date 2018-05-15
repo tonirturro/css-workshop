@@ -1,0 +1,16 @@
+<div class="dialog-box">
+  <div class="dialog-box__header">
+      <div class="header__icon"></div>
+      <div class="header__title">Lorem ipsum title</div>
+  </div>
+  <div class="dialog-box__content">
+      <dialog-section class="section" status-text="Everything is cool." status-code="ok">Title section 1 of lorem ipsum</dialog-section>
+      <dialog-section class="section" status-text="Houston, we have an apportunity!" status-code="warning">Title section 2 of lorem ipsum</dialog-section>
+      <dialog-section class="section" status-text="Houston, the crap reaches the ceiling..." status-code="danger">Title section 3 of lorem ipsum</dialog-section>
+  </div>
+  <div class="dialog-box__footer">       
+      <button class="button" ng-click="dialogCtrl.closeDialog()">Normal button</button>
+      <button class="button button--state-success" ng-click="dialogCtrl.closeDialog()">Success button</button>
+      <button class="button button--state-danger" ng-click="dialogCtrl.closeDialog()">Danger button</button>
+  </div>
+</div>
