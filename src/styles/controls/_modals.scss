@@ -18,6 +18,7 @@ $modal-width: 640px;
   display: none;
   overflow: hidden;
   outline: 0;
+  pointer-events: none;
 }
 
 .modal-backdrop.in {
@@ -57,6 +58,7 @@ $modal-width: 640px;
   position: relative;
   width: $modal-width;
   margin: 30px auto;
+  pointer-events: all;
 }
 
 .modal-content {
