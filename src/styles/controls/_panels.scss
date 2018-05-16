@@ -16,3 +16,55 @@
         color: $color-foreground;
     }
 }
+
+.panel-group {
+    margin-bottom: 20px;
+    .panel {
+        margin-bottom: 0;
+        border-radius: 4px;
+        .panel-body {
+            padding: 15px;
+        }
+    }
+    .panel + .panel {
+        margin-top: 5px;
+    }
+    .panel-heading {
+        border-bottom: 0;
+    }
+}
+
+.panel-default {
+    border-color: $color-panel;
+}
+
+.panel-default>.panel-heading {
+    color: $color-foreground;
+    background-color: $color-background;
+    border-color: $color-background-graphic;
+}
+
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border-top-color: $color-background-graphic;
+}
+
+.panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+    a {
+        cursor: pointer;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}

@@ -2,6 +2,7 @@ import "./styles/styles.scss";
 
 import * as angular from "angular";
 import { ITemplateCacheService } from "angular";
+import "angular-animate";
 import "angular-route";
 import "angular-ui-bootstrap";
 
@@ -15,7 +16,7 @@ import { DashboardController } from "./views/dashboard.controller";
 
 declare function require(params: string): any;
 
-const module = angular.module("app", [ "ngRoute", "ui.bootstrap" ])
+const module = angular.module("app", [ "ngAnimate", "ngRoute", "ui.bootstrap" ])
     .component("main", mainComponent)
     .component("dialogComponent", dialogComponent)
     .component("dialogSection", dialogSection)

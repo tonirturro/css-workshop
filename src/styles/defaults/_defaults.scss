@@ -111,4 +111,15 @@ nav {
     }
 }
 
+/*******
+/* classes
+*******/
+
+.collapse {
+    display: none;
+}
+
+.collapse.in {
+    display: block;
+}
 

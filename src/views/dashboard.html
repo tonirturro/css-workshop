@@ -16,8 +16,14 @@
                             <div class="panel-body"></div>
                         </div>
                         <div class="panels__panel-small panel">
-                            <div class="panel-heading">Panel 3</div>
-                            <div class="panel-body"></div>
+                            <div class="panel-heading">Accordion</div>
+                            <div class="panel-body">
+                                <uib-accordion close-others="true">
+                                    <div uib-accordion-group heading="{{group.title}}" ng-repeat="group in dashboardCtrl.accordionGroups">
+                                        {{group.content}}
+                                    </div>
+                                </uib-accordion>
+                            </div>
                         </div>
                         <div class="panels__panel-large panel">
                             <div class="panel-heading">Panel 4</div>
