@@ -30,8 +30,31 @@
                             <div class="panel-body"></div>
                         </div>
                         <div class="panels__panel-small panel">
-                            <div class="panel-heading">Panel 5</div>
-                            <div class="panel-body"></div>
+                            <div class="panel-heading">Drop down</div>
+                            <div class="panel-body">
+                                <!-- Single button -->
+                                <div id="single-button" class="button-group" uib-dropdown is-open="status.isopen">
+                                    <button type="button" class="button button--state-success" uib-dropdown-toggle ng-disabled="disabled">
+                                        Button dropdown
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                                        <li role="menuitem">
+                                            <a href="#!/dashboard">Action</a>
+                                        </li>
+                                        <li role="menuitem">
+                                            <a href="#!/dashboard">Another action</a>
+                                        </li>
+                                        <li role="menuitem">
+                                            <a href="#!/dashboard">Something else here</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li role="menuitem">
+                                            <a href="#!/dashboard">Separated link</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <div class="panels__panel-small panel">
                             <div class="panel-heading">Panel 6</div>

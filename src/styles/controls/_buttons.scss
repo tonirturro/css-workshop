@@ -1,6 +1,9 @@
 $button-border-radius:3px;
 $button-margin: 5px;
 .button {
+	.caret {
+		margin-left: 0;
+	}
 	@extend %font-style-button;
     color: $color-foreground;
 	border-radius: $button-border-radius;
@@ -26,6 +29,13 @@ $button-margin: 5px;
 }
 
 .button-group {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	>.button {
+		position: relative;
+		float: left;
+	}
 	.button {
 		margin: 0;
 		border-radius: 0;
