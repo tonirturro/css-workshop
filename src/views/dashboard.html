@@ -9,6 +9,10 @@
                             <div class="panel-heading">Modal Dialog</div>
                             <div class="panel-body">
                                 <button class="button button--state-success" ng-click="dashboardCtrl.showDialog()">Show Dialog</button>
+                                <div class="option">
+                                    <input type="checkbox" id="animation_checkbox" ng-model="dashboardCtrl.animateShowDialog">
+                                    <label for="animation_checkbox">Enable animation</label>   
+                                </div>
                             </div>
                         </div>
                         <div class="panels__panel-large panel">
@@ -18,11 +22,15 @@
                         <div class="panels__panel-small panel">
                             <div class="panel-heading">Accordion</div>
                             <div class="panel-body">
-                                <uib-accordion close-others="true">
+                                <uib-accordion close-others="{{ dashboardCtrl.closeOtherAccordions }}">
                                     <div uib-accordion-group heading="{{group.title}}" ng-repeat="group in dashboardCtrl.accordionGroups">
                                         {{group.content}}
                                     </div>
                                 </uib-accordion>
+                                <div class="option">
+                                    <input type="checkbox" id="closeOthers_checkbox" ng-model="dashboardCtrl.closeOtherAccordions">
+                                    <label for="closeOthers_checkbox">Allow only one open</label>   
+                                </div>
                             </div>
                         </div>
                         <div class="panels__panel-large panel">

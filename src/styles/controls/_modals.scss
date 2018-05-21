@@ -22,13 +22,11 @@ $modal-width: 640px;
 }
 
 .modal-backdrop.in {
-  filter: alpha(opacity=50);
-  opacity: .5;
+  opacity: .5;  
 }
 
 .modal-backdrop.fade {
-  filter: alpha(opacity=0);
-  opacity: 0;
+  opacity: .5;
 }
 
 .modal-backdrop {

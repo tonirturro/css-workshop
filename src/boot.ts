@@ -38,9 +38,6 @@ const module = angular.module("app", [ "ngAnimate", "ngRoute", "ui.bootstrap" ])
             controller: DashboardController,
             controllerAs: "dashboardCtrl",
             templateUrl: "views/dashboard.html"
-        })
-        .when("/uilib", {
-            templateUrl: "views/uilib.html"
         });
     });
 
@@ -53,5 +50,4 @@ module.run(["$templateCache", ($templateCache: ITemplateCacheService) => {
     $templateCache.put("views/defaults.html", require("./views/defaults.html"));
     $templateCache.put("views/boxes.html", require("./views/boxes.html"));
     $templateCache.put("views/dashboard.html", require("./views/dashboard.html"));
-    $templateCache.put("views/uilib.html", require("./views/uilib.html"));
 }]);

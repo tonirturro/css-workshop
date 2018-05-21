@@ -16,6 +16,8 @@ export class DashboardController {
    * Public properties
    */
   public accordionGroups: IAccordionGroup[];
+  public animateShowDialog: boolean;
+  public closeOtherAccordions: boolean;
 
   /**
    * Initializes a new instance from the DashboardController class
@@ -30,14 +32,20 @@ export class DashboardController {
       {
         content: "Body - 2",
         title: "Header - 2"
+      },
+      {
+        content: "Body - 3",
+        title: "Header - 3"
       }
     ];
+    this.animateShowDialog = false;
+    this.closeOtherAccordions = false;
   }
 
   // tslint:disable-next-line:no-empty
   public showDialog() {
     this.$uibModal.open({
-      animation: true,
+      animation: this.animateShowDialog,
       component: "dialogComponent"
     });
   }
