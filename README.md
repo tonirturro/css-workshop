@@ -3,15 +3,15 @@ Workshop to play with css trying to solve everyday web design ploblems
 
 ## Steps
 
-* step01 : Basic infrastucture.
-* step02 : Reset, normalize and redefine css defaults.
-* step03 : Element positioning, traditional box model.
-* step04 : Layouts, flexible box model.
-* step05 : Apply flexible box model to dialog layouts.
-* step06 : Move from Javascript to Typescript.
-* step07 : Using externals UI libs.
-* step08 : Customizing 3rd part controls.
-* step09 : Flex box element alignement preview.
+* step1  : Basic infrastucture.
+* step2  : Reset, normalize and redefine css defaults.
+* step3  : Element positioning, traditional box model.
+* step4  : Layouts, flexible box model.
+* step5  : Apply flexible box model to dialog layouts.
+* step6  : Move from Javascript to Typescript.
+* step7  : Using externals UI libs.
+* step8  : Customizing 3rd part controls.
+* step9  : Flex box element alignement preview.
 * step10 : More controls.
 
 To go to a particular step:
