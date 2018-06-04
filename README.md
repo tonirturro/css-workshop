@@ -13,6 +13,7 @@ Workshop to play with css trying to solve everyday web design ploblems
 * step8  : Customizing 3rd part controls.
 * step9  : Flex box element alignement preview.
 * step10 : More controls.
+* step11 : Put common scss definitions on private dependency.
 
 To go to a particular step:
 
