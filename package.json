@@ -25,7 +25,8 @@
     "angular": "^1.6.8",
     "angular-animate": "^1.7.0",
     "angular-route": "^1.6.8",
-    "angular-ui-bootstrap": "^2.5.6"
+    "angular-ui-bootstrap": "^2.5.6",
+    "css-workshop-lib": "file:./private-dependencies/css-workshop-lib-1.0.0.tgz"
   },
   "devDependencies": {
     "@types/angular": "^1.6.43",
